@@ -1,0 +1,23 @@
+{
+  "name": "sever-side-javascript",
+  "version": "1.0.0",
+  "description": "Server side javascript (nodejs)",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kyeongan/server-side-javascript.git"
+  },
+  "author": "Karl Kwon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kyeongan/server-side-javascript/issues"
+  },
+  "homepage": "https://github.com/Kyeongan/server-side-javascript#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "underscore": "^1.8.3"
+  }
+}
