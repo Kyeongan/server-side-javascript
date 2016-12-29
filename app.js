@@ -1,11 +1,19 @@
 var express = require('express');
 var app = express();
+var bodyParser = require('body_parser');
 
 app.set('view engine', 'pug');
 app.set('views', './views');
 app.locals.pretty = true;
 app.use(express.static('public'));
-
+app.get('/form', function(req, res){
+  res.render('form');
+})
+app.get('/form_receiver', function(req,res){
+  var title = req.query.title;
+  var desc = req.query.desc;
+  res.send(title + ', '+ desc);
+})
 app.get('/template', function(req, res){
     res.render('temp', {_title:'Pug(Jade))', time:Date()});
 })
