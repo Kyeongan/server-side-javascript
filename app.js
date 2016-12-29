@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+app.set('view engine', 'pub');
 
 app.use(express.static('public'));
 app.get('/savoye', function(req, res){
@@ -23,7 +24,7 @@ app.get('/dynamic', function(req, res){
       <title></title>
     </head>
     <body>
-      Hello, dynamic!
+      Hello, Dynamic!
       ${lis}
     </body>
   </html>
