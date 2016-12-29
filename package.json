@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Kyeongan/server-side-javascript#readme",
   "dependencies": {
     "express": "^4.14.0",
+    "pug": "^2.0.0-beta6",
     "underscore": "^1.8.3"
   }
 }

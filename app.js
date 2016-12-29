@@ -1,8 +1,15 @@
 var express = require('express');
 var app = express();
-app.set('view engine', 'pub');
 
+app.set('view engine', 'pug');
+app.set('views', './views');
 app.use(express.static('public'));
+
+app.get('/template', function(req, res){
+    res.render('temp');
+})
+
+
 app.get('/savoye', function(req, res){
   res.send('Hello savoye <img src=/savoye.jpg>');
 });
