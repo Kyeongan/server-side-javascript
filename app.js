@@ -14,10 +14,26 @@ app.get('/savoye', function(req, res){
   res.send('Hello savoye <img src=/savoye.jpg>');
 });
 
-app.get('/', (req, res)=>{
+app.get('/topics/:id', (req, res)=>{
   // res.send('Main Entry Point in nodejs');
-  res.send(req.query.id +', ' + req.query.name);
+  var topics = [
+    'Javascript...',
+    'Nodejs...',
+    'Expressjs...'
+  ];
+  var h1 = `
+    <a href=/topics/0>Javascript</a></br>
+    <a href=/topics/1>Nodejs</a></br>
+    <a href=/topics/2>Expressjs</a></br></br>
+    ${topics[req.params.id]}
+  `;
+  res.send(h1);
+  // res.send(topics[req.query.id]);
 });
+
+app.get('/topics/:id/:mode', function(req, res) {
+  res.send(req.params.id + ', '+ req.params.mode);
+})
 
 app.get('/dynamic', function(req, res){
   var lis = ''
