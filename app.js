@@ -3,10 +3,11 @@ var app = express();
 
 app.set('view engine', 'pug');
 app.set('views', './views');
+app.locals.pretty = true;
 app.use(express.static('public'));
 
 app.get('/template', function(req, res){
-    res.render('temp');
+    res.render('temp', {_title:'Jade(pug))', time:Date()});
 })
 
 
