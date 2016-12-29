@@ -7,16 +7,16 @@ app.locals.pretty = true;
 app.use(express.static('public'));
 
 app.get('/template', function(req, res){
-    res.render('temp', {_title:'Jade(pug))', time:Date()});
+    res.render('temp', {_title:'Pug(Jade))', time:Date()});
 })
-
 
 app.get('/savoye', function(req, res){
   res.send('Hello savoye <img src=/savoye.jpg>');
 });
 
 app.get('/', (req, res)=>{
-  res.send('Main Entry Point in nodejs');
+  // res.send('Main Entry Point in nodejs');
+  res.send(req.query.id +', ' + req.query.name);
 });
 
 app.get('/dynamic', function(req, res){
