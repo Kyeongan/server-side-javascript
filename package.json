@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/Kyeongan/server-side-javascript#readme",
   "dependencies": {
-    "body-parser": "^1.15.2",
+    "body-parser": "^1.16.0",
     "express": "^4.14.0",
     "lodash": "^4.17.4",
     "orientjs": "^2.2.4",
